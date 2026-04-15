@@ -1,21 +1,30 @@
 "use strict";
 
-const countDisplay = document.querySelector("#counter");
-const clickButton = document.querySelector("#click-button");
-const resetButton = document.querySelector("#reset-button");
+const movies = ["Inception", "The Matrix", "Interstellar", "The Dark Knight", "Pulp Fiction"];
 
-console.log(countDisplay);
-console.log(clickButton);
-console.log(resetButton);
+console.log("alle film:", movies);
 
-let count = 0;
+console.log ("Første film:", movies [0]);
+console.log ("Anden film:", movies [1]);
+console.log ("sidste film:", movies[3]);
 
-clickButton.addEventListener("click", function () {
-  count = count + 1;
-  countDisplay.textContent = count;
-});
+console.log("Antal film", movies.length);
 
-resetButton.addEventListener("click", function () {
-  count = 0;
-  countDisplay.textContent = count;
-});
+for (const movie of movies) {
+  const html = `
+  <article class="movie-card">
+    <div class="movie-info">
+      <h3>${movie}</h3>
+    </div>
+  </article>
+`;
+  movieList.insertAdjacentHTML("beforend", html);
+}
+
+const movieList = document.querySelector("#movie-list");
+console.log(movieList);
+
+<section id="movie-list" class="movie-grid" aria-label="Filmliste">
+</section>
+
+
