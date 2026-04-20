@@ -48,39 +48,44 @@ const movies = [
     title: "Shawshank Redemption",
     year: 1994,
     rating: 9.3,
-    image: "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_.jpg"
+    image:
+      "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_.jpg",
   },
   {
     title: "Fight Club",
     year: 1999,
     rating: 8.3,
-    image: "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_.jpg",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_.jpg",
   },
   {
     title: "Spider-Man",
     year: 2002,
     rating: 7.3,
-    image: "https://upload.wikimedia.org/wikipedia/en/6/6c/Spider-Man_%282002_film%29_poster.jpg"
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/6/6c/Spider-Man_%282002_film%29_poster.jpg",
   },
   {
     title: "Star Wars: Episode III - Revenge of the Sith",
     year: 2005,
     rating: 7.7,
-    image: "https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg",
   },
   {
-   title: "Southpaw",
-   year: 2015,
-   rating: 7.3, 
-    image: "https://m.media-amazon.com/images/S/pv-target-images/e6a3620a55ec1bc9e4d9c42b8ed2488b5111ff451ae4f7f26042025301877811.jpg",
+    title: "Southpaw",
+    year: 2015,
+    rating: 7.3,
+    image:
+      "https://m.media-amazon.com/images/S/pv-target-images/e6a3620a55ec1bc9e4d9c42b8ed2488b5111ff451ae4f7f26042025301877811.jpg",
   },
   {
     title: "Creed",
     year: 2015,
     rating: 7.6,
-    image: "https://m.media-amazon.com/images/M/MV5BNWM3NjY2ZDctMGZiYy00OGFlLThkMTktOTY2MDM2YjE2OTliXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BNWM3NjY2ZDctMGZiYy00OGFlLThkMTktOTY2MDM2YjE2OTliXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
   },
-
 ];
 
 const movieList = document.querySelector("#movie-list");
