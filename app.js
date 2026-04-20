@@ -86,6 +86,13 @@ const movies = [
     image:
       "https://m.media-amazon.com/images/M/MV5BNWM3NjY2ZDctMGZiYy00OGFlLThkMTktOTY2MDM2YjE2OTliXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
   },
+  {
+    title: "Mac & Devin Go to High School",
+    year: 2012,
+    rating: 4.4,
+    image:
+      "https://m.media-amazon.com/images/M/MV5BMTM1OTUwOTMyM15BMl5BanBnXkFtZTcwNTQ3OTk2Nw@@._V1_.jpg",
+  },
 ];
 
 const movieList = document.querySelector("#movie-list");
