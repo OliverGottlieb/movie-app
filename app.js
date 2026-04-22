@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 const MOVIES_URL =
   "https://raw.githubusercontent.com/cederdorff/race/refs/heads/master/data/movies.json";
