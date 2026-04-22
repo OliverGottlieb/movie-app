@@ -2,13 +2,20 @@
 
 document.addEventListener("DOMContentLoaded", initApp);
 
-const MOVIES_URL = "https://raw.githubusercontent.com/cederdorff/race/refs/heads/master/data/movies.json";
+const MOVIES_URL =
+  "https://raw.githubusercontent.com/cederdorff/race/refs/heads/master/data/movies.json";
 let allMovies = [];
 
 function initApp() {
-  document.querySelector("#search-input").addEventListener("input", applyFiltersAndSort);
-  document.querySelector("#genre-select").addEventListener("change", applyFiltersAndSort);
-  document.querySelector("#sort-select").addEventListener("change", applyFiltersAndSort);
+  document
+    .querySelector("#search-input")
+    .addEventListener("input", applyFiltersAndSort);
+  document
+    .querySelector("#genre-select")
+    .addEventListener("change", applyFiltersAndSort);
+  document
+    .querySelector("#sort-select")
+    .addEventListener("change", applyFiltersAndSort);
 
   getMovies();
 }
@@ -34,25 +41,34 @@ function populateGenreSelect() {
 
   genreArray.sort((movieA, movieB) => movieA.localeCompare(movieB)); // Sorter genrer alfabetisk
   for (const genre of genreArray) {
-    genreSelect.insertAdjacentHTML("beforeend", `<option value="${genre}">${genre}</option>`); // Tilføj genrer som options i select elementet
+    genreSelect.insertAdjacentHTML(
+      "beforeend",
+      `<option value="${genre}">${genre}</option>`,
+    ); // Tilføj genrer som options i select elementet
   }
 }
 
 function applyFiltersAndSort() {
-  const searchValue = document.querySelector("#search-input").value.trim().toLowerCase(); // Hent søgeinput, fjern whitespace og konverter til lowercase
+  const searchValue = document
+    .querySelector("#search-input")
+    .value.trim()
+    .toLowerCase(); // Hent søgeinput, fjern whitespace og konverter til lowercase
   const selectedGenre = document.querySelector("#genre-select").value; // Hent den valgte genre fra select elementet
   const sortOption = document.querySelector("#sort-select").value; // Hent den valgte sorteringsmulighed
 
   // Filtrer film baseret på søgeinput og valgt genre
   let filteredMovies = allMovies.filter(function (movie) {
     const matchesTitle = movie.title.toLowerCase().includes(searchValue);
-    const matchesGenre = selectedGenre === "all" || movie.genre.includes(selectedGenre);
+    const matchesGenre =
+      selectedGenre === "all" || movie.genre.includes(selectedGenre);
     return matchesTitle && matchesGenre;
   });
 
   // Sorter de filtrerede film baseret på den valgte sorteringsmulighed
   if (sortOption === "title") {
-    filteredMovies.sort((movieA, movieB) => movieA.title.localeCompare(movieB.title));
+    filteredMovies.sort((movieA, movieB) =>
+      movieA.title.localeCompare(movieB.title),
+    );
   } else if (sortOption === "year") {
     filteredMovies.sort((movieA, movieB) => movieB.year - movieA.year);
   } else if (sortOption === "rating") {
@@ -70,7 +86,8 @@ function showMovies(movies) {
   movieCount.textContent = `Viser ${movies.length} ud af ${allMovies.length} film`;
 
   if (movies.length === 0) {
-    movieList.innerHTML = '<p class="empty">Ingen film matcher din søgning eller genre.</p>';
+    movieList.innerHTML =
+      '<p class="empty">Ingen film matcher din søgning eller genre.</p>';
     return;
   }
 
